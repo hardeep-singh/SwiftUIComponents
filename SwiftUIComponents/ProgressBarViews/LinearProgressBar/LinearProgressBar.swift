@@ -44,10 +44,10 @@ struct LinearProgressBar: View {
         }
     }
     
-    private func progress(value: Float,
+    private func progress(value: Double,
                           maxValue: Float,
                           width: CGFloat) -> CGFloat {
-        let percentage = value / maxValue
+        let percentage = Float(value) / maxValue
         return width *  CGFloat(percentage)
     }
     

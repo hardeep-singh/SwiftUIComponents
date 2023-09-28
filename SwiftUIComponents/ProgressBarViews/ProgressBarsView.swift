@@ -12,11 +12,8 @@ import SwiftUI
 struct ProgressBarsView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-            LinearProgressBar(viewModel: .init(duration: 0.1, range: 0.0...1.0, currentValue: 0.5)).frame(height: 30).frame(maxWidth: .infinity)
+            LinearProgressBar(viewModel: .init(value: 0.5, in: 0.0...1.0, step: 0.1))
+                .frame(height: 30).frame(maxWidth: .infinity)
         }
         .padding()
     }
