@@ -31,7 +31,7 @@ struct LinearProgressBar: View {
                     .opacity(1.0)
                     .foregroundColor(backgroundColor)
                 RoundedRectangle(cornerRadius: radius(geometry: geometry)).frame(width:
-                                    progress(value: viewModel.value,
+                                    progress(value: viewModel.progress,
                                              maxValue: closedRange.upperBound,
                                              width: geometry.size.width),
                                   height: geometry.size.height)

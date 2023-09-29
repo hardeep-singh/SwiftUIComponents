@@ -13,7 +13,7 @@ internal class LinearProgressBarViewModel: ObservableObject {
     var id: UUID
     
     private(set) var duration: Double
-    @Published var value: Double = 0.5
+    @Published var progress: Double = 0.5
     private(set) var range: ClosedRange<Double> = 0.0...1.0 // defuatl range..
     private var currentValue: Double!
         
@@ -39,11 +39,11 @@ internal class LinearProgressBarViewModel: ObservableObject {
     func setProgress(currentValue: Double) {
         if range.contains(currentValue) {
             let _value = (currentValue -  range.lowerBound) / (range.upperBound - range.lowerBound)
-            self.value = _value
+            self.progress = _value
         } else if currentValue < range.lowerBound {
-            self.value = 0.0
+            self.progress = 0.0
         } else {
-            self.value = 1.0
+            self.progress = 1.0
         }
     }
     
