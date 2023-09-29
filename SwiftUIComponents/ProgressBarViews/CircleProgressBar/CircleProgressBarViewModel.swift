@@ -7,55 +7,63 @@
 
 import Combine
 
+//typealias Seconds = Int64
+
 internal class CircleProgressBarViewModel: ObservableObject {
     
     // range 0 to 1.
-    @Published var value: Float = 1.0
+    @Published var progress: Float = 1.0
     @Published var text: String = ""
     
     private var range: ClosedRange<Double>!
     private var currentValue: Double!
-    private var increasingOrder: Bool = false
+    private var increasingOrder: Bool = true
     
-    init(currentValue: Double = 0.0, range: ClosedRange<Double> = 0.0...1.0, increasingOrder: Bool = false) {
+    init(value: Double = 0.0,
+         in range: ClosedRange<Double> = 0.0...1.0,
+         increasingOrder: Bool = true) {
         self.range = range
         self.increasingOrder = increasingOrder
-        self.value = progressOrder(value: Float(currentValue))
+        self.progress = progressOrder(value: Float(value))
     }
     
     private func progressOrder(value: Float) -> Float {
         return increasingOrder ? Float(value) : (1.0 - Float(value))
     }
     
-    func timeToShow(range: ClosedRange<Double>, currentValue: Double) -> String  {
-        let seconds = Seconds(max(range.upperBound - currentValue, 0.0))
-        let (h, m, s) = Tribe.secondsToHoursMinutesSeconds(seconds: seconds)
-        var timeString = "0"
-        if h > 0 {
-            timeString = String(format: "%i:%02i:%02i", h, m, s)
-        } else if m > 0 {
-            timeString = String(format: "%02i:%02i", m, s)
-        } else {
-            timeString = String(format: "%02i", s)
-        }
-        return timeString
-    }
+//    static func secondsToHoursMinutesSeconds(seconds : Seconds) -> (Seconds, Seconds, Seconds) {
+//      return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
+//    }
+//    
+//    func timeToShow(range: ClosedRange<Double>, currentValue: Double) -> String  {
+//        let seconds = Seconds(max(range.upperBound - currentValue, 0.0))
+//        let (h, m, s) = Self.secondsToHoursMinutesSeconds(seconds: seconds)
+//        var timeString = "0"
+//        if h > 0 {
+//            timeString = String(format: "%i:%02i:%02i", h, m, s)
+//        } else if m > 0 {
+//            timeString = String(format: "%02i:%02i", m, s)
+//        } else {
+//            timeString = String(format: "%02i", s)
+//        }
+//        return timeString
+//    }
     
-    func setProgress(range: ClosedRange<Double>, currentValue: Double, text: String) {
+    func setProgress(value: Double, text: String, in range: ClosedRange<Double>) {
         
-        self.text = timeToShow(range: range, currentValue: currentValue)
+        self.text = text
 
-        if range.contains(currentValue) {
-            let _value = (currentValue -  range.lowerBound) / (range.upperBound - range.lowerBound)
+        if range.contains(value) {
+            let _value: Double = (value -  range.lowerBound) / (range.upperBound - range.lowerBound)
             if _value.isNaN {
                 return
             }
-            self.value = progressOrder(value: Float(_value)) //increasingOrder ? Float(_value) : (1.0 - Float(_value))
+            self.progress = progressOrder(value: Float(_value))
 
-        } else if currentValue < range.lowerBound {
-            self.value = 0.0
+        } else if value < range.lowerBound {
+            self.progress = 0.0
         } else {
-            self.value = 1.0
+            self.progress = 1.0
         }
     }
     

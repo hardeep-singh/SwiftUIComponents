@@ -10,7 +10,6 @@ import SwiftUI
 struct CircleProgressBar: View {
     
     @ObservedObject var viewModel: CircleProgressBarViewModel
-//    @State var fontSize: CGFloat = 50
     
     @State var customize: CustomUI = CustomUI()
     
@@ -48,6 +47,11 @@ struct CircleProgressBar: View {
         self.customize = customize()
         self.viewModel = viewModel
     }
+    
+    init(viewModel: CircleProgressBarViewModel) {
+        self.customize = CustomUI()
+        self.viewModel = viewModel
+    }
 
     var body: some View {
         GeometryReader { geometry in
@@ -60,11 +64,11 @@ struct CircleProgressBar: View {
                         .padding(customize.progressBarWidth + customize.circelPadding)
                     
                     Circle()
-                        .trim(from: 0.0, to: CGFloat(viewModel.value))
+                        .trim(from: 0.0, to: CGFloat(viewModel.progress))
                         .stroke(style: StrokeStyle(lineWidth: customize.progressBarWidth, lineCap: .butt, lineJoin: .bevel))
                         .foregroundColor(customize.progressBarColor)
                     
-                    Slider(progress: $viewModel.value,
+                    Slider(progress: $viewModel.progress,
                            sliderColor: customize.progressBarColor,
                            sliderWidth: customize.progressBarWidth)
                         .frame(width: 25, height: 25)
@@ -75,15 +79,14 @@ struct CircleProgressBar: View {
                            sliderWidth: customize.progressBarWidth)
                         .frame(width: 25, height: 25)
                         .offset(x: (geometry.size.width) / 2)
-                        .rotationEffect(.init(degrees: Double(viewModel.value * 360)))
+                        .rotationEffect(.init(degrees: Double(viewModel.progress * 360)))
                 }
                 .rotationEffect(.init(degrees: 270))
                 
                 Text(viewModel.text)
                     .lineLimit(1)
                     .minimumScaleFactor(0.2)
-                    .font(.bold(size: customize.fontSize))
-                    //.font(Font.custom("Avenir-Heavy", size: customize.fontSize, relativeTo: .title))
+                    .font(Font.system(size: customize.fontSize))
                     .foregroundColor(customize.textColor)
                     .padding([.horizontal], (customize.barWidth + customize.progressBarWidth + customize.circelPadding))
                     .shadow(color: .black.opacity(0.8), radius: 1, x: 0.2, y: 0.5)
