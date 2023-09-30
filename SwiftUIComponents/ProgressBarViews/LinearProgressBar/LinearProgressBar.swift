@@ -52,9 +52,3 @@ struct LinearProgressBar: View {
     }
     
 }
-
-//struct LinearProgressBar_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LinearProgressBar(viewModel: .init(range: 0...1.0, currentValue: 0.5))
-//    }
-//}
