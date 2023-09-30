@@ -26,9 +26,9 @@ struct SegmentProgressBar: View {
     }
     
     private func barWidth(_ geometryProxy: GeometryProxy, barViewModel: LinearProgressBarViewModel) -> CGFloat {
-        return CGFloat(viewModel.widthOfSegment(width: widthToFloat(geometryProxy),
+        return CGFloat(viewModel.widthForSegment(screenWidth: widthToFloat(geometryProxy),
                                                 padding: Float(spacing(geometryProxy)),
-                                                value: barViewModel.duration))
+                                                model: barViewModel))
     }
     
     var body: some View {
