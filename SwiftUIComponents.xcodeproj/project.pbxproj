@@ -19,6 +19,8 @@
 		EB2F44F12AC55C520028A5E2 /* LinearProgressBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2F44EF2AC55C520028A5E2 /* LinearProgressBarViewModel.swift */; };
 		EB2F44F52AC647E50028A5E2 /* CircleProgressBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2F44F32AC647E50028A5E2 /* CircleProgressBarViewModel.swift */; };
 		EB2F44F62AC647E50028A5E2 /* CircleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2F44F42AC647E50028A5E2 /* CircleProgressBar.swift */; };
+		EBF11EC82AC7DBB200F07159 /* SegmentProgressBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF11EC62AC7DBB200F07159 /* SegmentProgressBarViewModel.swift */; };
+		EBF11EC92AC7DBB200F07159 /* SegmentProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF11EC72AC7DBB200F07159 /* SegmentProgressBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		EB2F44EF2AC55C520028A5E2 /* LinearProgressBarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearProgressBarViewModel.swift; sourceTree = "<group>"; };
 		EB2F44F32AC647E50028A5E2 /* CircleProgressBarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgressBarViewModel.swift; sourceTree = "<group>"; };
 		EB2F44F42AC647E50028A5E2 /* CircleProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgressBar.swift; sourceTree = "<group>"; };
+		EBF11EC62AC7DBB200F07159 /* SegmentProgressBarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentProgressBarViewModel.swift; sourceTree = "<group>"; };
+		EBF11EC72AC7DBB200F07159 /* SegmentProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,7 @@
 		EB2F44EC2AC55C0C0028A5E2 /* ProgressBarViews */ = {
 			isa = PBXGroup;
 			children = (
+				EBF11EC52AC7DBB200F07159 /* SegmentProgressBar */,
 				EB2F44F22AC647E50028A5E2 /* CircleProgressBar */,
 				EB2F44ED2AC55C520028A5E2 /* LinearProgressBar */,
 				EB2F44EA2AC55BA40028A5E2 /* ProgressBarsView.swift */,
@@ -164,6 +169,15 @@
 				EB2F44F42AC647E50028A5E2 /* CircleProgressBar.swift */,
 			);
 			path = CircleProgressBar;
+			sourceTree = "<group>";
+		};
+		EBF11EC52AC7DBB200F07159 /* SegmentProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				EBF11EC62AC7DBB200F07159 /* SegmentProgressBarViewModel.swift */,
+				EBF11EC72AC7DBB200F07159 /* SegmentProgressBar.swift */,
+			);
+			path = SegmentProgressBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +317,8 @@
 				EB2F44F02AC55C520028A5E2 /* LinearProgressBar.swift in Sources */,
 				EB2F44F52AC647E50028A5E2 /* CircleProgressBarViewModel.swift in Sources */,
 				EB2F44F12AC55C520028A5E2 /* LinearProgressBarViewModel.swift in Sources */,
+				EBF11EC82AC7DBB200F07159 /* SegmentProgressBarViewModel.swift in Sources */,
+				EBF11EC92AC7DBB200F07159 /* SegmentProgressBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
