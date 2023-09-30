@@ -12,7 +12,7 @@ internal class LinearProgressBarViewModel: ObservableObject {
    
     var id: UUID
     
-    private(set) var duration: Double
+//    private(set) var duration: Double
     @Published var progress: Double = 0.5
     private(set) var range: ClosedRange<Double> = 0.0...1.0 // defuatl range..
     private var currentValue: Double!
@@ -22,9 +22,8 @@ internal class LinearProgressBarViewModel: ObservableObject {
     ///                     step: step)
     ///                       
     ///
-    init(value: Double, in range: ClosedRange<Double>, step: Double = 0.0) {
+    init(value: Double, in range: ClosedRange<Double>) {
         self.id = UUID()
-        self.duration = step
         self.range = range
         self.setProgress(currentValue: value)
     }
