@@ -18,13 +18,17 @@ struct ProgressBarsView: View {
                 .frame(height: 30)
                 .frame(maxWidth: .infinity)
             
+            SegmentProgressBar(viewModel: progressBarsViewModel.segmentProgressBarViewModel)
+                .frame(height: 30)
+                .frame(maxWidth: .infinity)
+                .background(Color.purple)
+            
             CircleProgressBar(viewModel: progressBarsViewModel.circleProgressBarViewModel)
                 .frame(width: 200, height: 200)
             
             CircleProgressBar(viewModel: progressBarsViewModel.circleProgressBarViewDecreasing)
                 .frame(width: 200, height: 200)
             
-            SegmentProgressBar(viewModel: progressBarsViewModel.segmentProgressBarViewModel)
         }
         .padding()
         .onAppear() {

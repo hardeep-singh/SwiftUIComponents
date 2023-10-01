@@ -39,7 +39,7 @@ struct SegmentProgressBar: View {
                     ForEach(viewModel.progressBarViewModels, id: \.self) { progressBarViewModel in
                         VStack(alignment: .center) {
                             LinearProgressBar(viewModel: progressBarViewModel)
-                                .frame(width: barWidth( geometry, barViewModel: progressBarViewModel), height: 15)
+                                .frame(width: barWidth( geometry, barViewModel: progressBarViewModel), height: geometry.size.height)
                         }
                     }
                     Spacer()
