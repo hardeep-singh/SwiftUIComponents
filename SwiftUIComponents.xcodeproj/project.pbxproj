@@ -21,6 +21,7 @@
 		EB2F44F62AC647E50028A5E2 /* CircleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2F44F42AC647E50028A5E2 /* CircleProgressBar.swift */; };
 		EBF11EC82AC7DBB200F07159 /* SegmentProgressBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF11EC62AC7DBB200F07159 /* SegmentProgressBarViewModel.swift */; };
 		EBF11EC92AC7DBB200F07159 /* SegmentProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF11EC72AC7DBB200F07159 /* SegmentProgressBar.swift */; };
+		EBF11ECB2AC8F23600F07159 /* ProgressBarsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF11ECA2AC8F23600F07159 /* ProgressBarsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		EB2F44F42AC647E50028A5E2 /* CircleProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgressBar.swift; sourceTree = "<group>"; };
 		EBF11EC62AC7DBB200F07159 /* SegmentProgressBarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentProgressBarViewModel.swift; sourceTree = "<group>"; };
 		EBF11EC72AC7DBB200F07159 /* SegmentProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentProgressBar.swift; sourceTree = "<group>"; };
+		EBF11ECA2AC8F23600F07159 /* ProgressBarsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				EB2F44F22AC647E50028A5E2 /* CircleProgressBar */,
 				EB2F44ED2AC55C520028A5E2 /* LinearProgressBar */,
 				EB2F44EA2AC55BA40028A5E2 /* ProgressBarsView.swift */,
+				EBF11ECA2AC8F23600F07159 /* ProgressBarsViewModel.swift */,
 			);
 			path = ProgressBarViews;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				EB2F44F02AC55C520028A5E2 /* LinearProgressBar.swift in Sources */,
 				EB2F44F52AC647E50028A5E2 /* CircleProgressBarViewModel.swift in Sources */,
 				EB2F44F12AC55C520028A5E2 /* LinearProgressBarViewModel.swift in Sources */,
+				EBF11ECB2AC8F23600F07159 /* ProgressBarsViewModel.swift in Sources */,
 				EBF11EC82AC7DBB200F07159 /* SegmentProgressBarViewModel.swift in Sources */,
 				EBF11EC92AC7DBB200F07159 /* SegmentProgressBar.swift in Sources */,
 			);
