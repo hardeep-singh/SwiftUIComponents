@@ -47,7 +47,7 @@ class ProgressBarsViewModel: ObservableObject {
     }
     
     func updateViewModels() {
-        linearProgressBarViewModel.setProgress(currentValue: Double(counter))
+        linearProgressBarViewModel.setProgress(value: Double(counter))
         
         
         circleProgressBarViewModel.setProgress(value: Double(counter), text: "Increasing Order")
