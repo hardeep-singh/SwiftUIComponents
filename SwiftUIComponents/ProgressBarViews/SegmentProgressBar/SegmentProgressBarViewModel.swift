@@ -39,13 +39,13 @@ class SegmentProgressBarViewModel: ObservableObject {
         if let currentProgressBarViewModel = self.currentProgressBarViewModel,
             currentProgressBarViewModel.range.contains(Double(seconds)) {
             
-            currentProgressBarViewModel.setProgress(currentValue: Double(seconds))
+            currentProgressBarViewModel.setProgress(value: Double(seconds))
 
         } else {
             if let nextProgressBarViewModel = getCurrentSegment(seconds: seconds) {
                 self.currentProgressBarViewModel = nextProgressBarViewModel
             }
-            currentProgressBarViewModel?.setProgress(currentValue: Double(seconds))
+            currentProgressBarViewModel?.setProgress(value: Double(seconds))
         }
         
         
