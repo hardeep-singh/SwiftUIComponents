@@ -49,7 +49,7 @@ internal class CircleProgressBarViewModel: ObservableObject {
 //        return timeString
 //    }
     
-    func setProgress(value: Double, text: String, in range: ClosedRange<Double>) {
+    func setProgress(value: Double, text: String = "") {
         
         self.text = text
 

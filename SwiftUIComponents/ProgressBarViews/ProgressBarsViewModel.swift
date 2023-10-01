@@ -50,8 +50,8 @@ class ProgressBarsViewModel: ObservableObject {
         linearProgressBarViewModel.setProgress(currentValue: Double(counter))
         
         
-        circleProgressBarViewModel.setProgress(value: Double(counter), text: "Increasing Order", in: 0...100)
-        circleProgressBarViewDecreasing.setProgress(value: Double(counter), text: "Decreasing Order", in: 0...100)
+        circleProgressBarViewModel.setProgress(value: Double(counter), text: "Increasing Order")
+        circleProgressBarViewDecreasing.setProgress(value: Double(counter), text: "Decreasing Order")
 
         segmentProgressBarViewModel.setProgress(seconds: SegmentProgressBarViewModel.Seconds(counter))
         
