@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8AC3D2172D12409100D8778C /* AdaptiveScrollViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC3D2162D12409100D8778C /* AdaptiveScrollViewExample.swift */; };
+		8AC3D21A2D12409400D8778C /* AdaptiveScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC3D2182D12409400D8778C /* AdaptiveScrollView.swift */; };
 		EB2F44C12AC55B550028A5E2 /* SwiftUIComponentsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2F44C02AC55B550028A5E2 /* SwiftUIComponentsApp.swift */; };
 		EB2F44C32AC55B550028A5E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2F44C22AC55B550028A5E2 /* ContentView.swift */; };
 		EB2F44C52AC55B580028A5E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB2F44C42AC55B580028A5E2 /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8AC3D2162D12409100D8778C /* AdaptiveScrollViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveScrollViewExample.swift; sourceTree = "<group>"; };
+		8AC3D2182D12409400D8778C /* AdaptiveScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveScrollView.swift; sourceTree = "<group>"; };
 		EB2F44BD2AC55B540028A5E2 /* SwiftUIComponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIComponents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2F44C02AC55B550028A5E2 /* SwiftUIComponentsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIComponentsApp.swift; sourceTree = "<group>"; };
 		EB2F44C22AC55B550028A5E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8AC3D2192D12409400D8778C /* AdaptiveScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				8AC3D2182D12409400D8778C /* AdaptiveScrollView.swift */,
+			);
+			path = AdaptiveScrollView;
+			sourceTree = "<group>";
+		};
 		EB2F44B42AC55B540028A5E2 = {
 			isa = PBXGroup;
 			children = (
@@ -110,9 +122,11 @@
 		EB2F44BF2AC55B550028A5E2 /* SwiftUIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				8AC3D2192D12409400D8778C /* AdaptiveScrollView */,
 				EB2F44EC2AC55C0C0028A5E2 /* ProgressBarViews */,
 				EB2F44C02AC55B550028A5E2 /* SwiftUIComponentsApp.swift */,
 				EB2F44C22AC55B550028A5E2 /* ContentView.swift */,
+				8AC3D2162D12409100D8778C /* AdaptiveScrollViewExample.swift */,
 				EB2F44C42AC55B580028A5E2 /* Assets.xcassets */,
 				EB2F44C62AC55B580028A5E2 /* Preview Content */,
 			);
@@ -316,6 +330,7 @@
 				EB2F44EB2AC55BA40028A5E2 /* ProgressBarsView.swift in Sources */,
 				EB2F44C32AC55B550028A5E2 /* ContentView.swift in Sources */,
 				EB2F44F62AC647E50028A5E2 /* CircleProgressBar.swift in Sources */,
+				8AC3D2172D12409100D8778C /* AdaptiveScrollViewExample.swift in Sources */,
 				EB2F44C12AC55B550028A5E2 /* SwiftUIComponentsApp.swift in Sources */,
 				EB2F44F02AC55C520028A5E2 /* LinearProgressBar.swift in Sources */,
 				EB2F44F52AC647E50028A5E2 /* CircleProgressBarViewModel.swift in Sources */,
@@ -323,6 +338,7 @@
 				EBF11ECB2AC8F23600F07159 /* ProgressBarsViewModel.swift in Sources */,
 				EBF11EC82AC7DBB200F07159 /* SegmentProgressBarViewModel.swift in Sources */,
 				EBF11EC92AC7DBB200F07159 /* SegmentProgressBar.swift in Sources */,
+				8AC3D21A2D12409400D8778C /* AdaptiveScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
